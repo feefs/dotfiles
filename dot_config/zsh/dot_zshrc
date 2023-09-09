@@ -16,8 +16,16 @@ PROMPT='%F{blue}%1~%f ${vcs_info_msg_0_}'
 
 ### BINARIES
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
+case "$OSTYPE" in
+    darwin*)
+    BREW_PREFIX="/opt/homebrew"
+    ;;
+    linux*)
+    BREW_PREFIX="/home/linuxbrew/.linuxbrew"
+    ;;
+esac
+eval "$(${BREW_PREFIX}/bin/brew shellenv)"
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # fnm
 eval "$(fnm env --use-on-cd)"
 # pyenv
@@ -39,7 +47,7 @@ FPATH="$HOME/repos/koushin/completions:${FPATH}"
 ### SOURCED CONFIGS
 # fzf
 source ~/.config/fzf/config
-source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
 # fzf-tab
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ":fzf-tab:*" fzf-flags --height=60%
