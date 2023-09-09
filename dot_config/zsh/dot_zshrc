@@ -14,6 +14,9 @@ setopt prompt_subst
 zstyle ":vcs_info:*" formats "%F{blue}(%f%b%F{blue})%f "
 PROMPT='%F{blue}%1~%f ${vcs_info_msg_0_}'
 
+# editor
+export EDITOR="nvim"
+
 ### BINARIES
 # Homebrew
 case "$OSTYPE" in
