@@ -1,0 +1,11 @@
+[user]
+	name = feefs
+	email = feefs@berkeley.edu
+[init]
+	defaultBranch = master
+[alias]
+	dag = -c core.pager='less -S' log --all --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) %C(blue)%C(white)%an %C(blue)(%ar)%C(reset)%C(cyan)%d%C(reset) %C(white)%s%C(reset)'
+	cdiff = diff --cached
+	st = status
+[core]
+	pager = less -F -X
