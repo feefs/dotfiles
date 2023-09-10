@@ -1,4 +1,4 @@
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.cmd.colorscheme("catppuccin-mocha")
 vim.o.cursorline = true
 vim.o.number = true
 vim.o.relativenumber = true
