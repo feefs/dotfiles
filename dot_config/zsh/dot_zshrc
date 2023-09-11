@@ -45,8 +45,9 @@ export PATH="$HOME/.docker/bin:$PATH"
 # spicetify
 SPICETIFY_INSTALL="$HOME/.spicetify"
 export PATH="$HOME/.spicetify:$PATH"
-# koushin completions
-FPATH="$HOME/repos/koushin/completions:${FPATH}"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 ### SOURCED CONFIGS
 # fzf
@@ -65,6 +66,12 @@ bindkey '^ ' forward-word
 ### ALIASES
 alias ls="exa"
 alias buu="brew update && brew upgrade"
+
+### COMPLETIONS
+# koushin completions
+FPATH="$HOME/repos/koushin/completions:${FPATH}"
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # load completions
 autoload -Uz compinit && compinit
