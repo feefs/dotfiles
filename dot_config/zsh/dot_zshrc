@@ -40,6 +40,8 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # cargo
 . "$HOME/.cargo/env"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
+# go
+export PATH="$(go env GOPATH)/bin:$PATH"
 # docker cli
 export PATH="$HOME/.docker/bin:$PATH"
 # spicetify
