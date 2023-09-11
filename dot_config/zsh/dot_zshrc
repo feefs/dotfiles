@@ -63,6 +63,7 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' forward-word
 
 ### ALIASES
+alias ls="exa"
 alias buu="brew update && brew upgrade"
 
 # load completions
