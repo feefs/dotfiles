@@ -48,7 +48,7 @@ export PATH="$HOME/.docker/bin:$PATH"
 SPICETIFY_INSTALL="$HOME/.spicetify"
 export PATH="$HOME/.spicetify:$PATH"
 
-### SOURCED CONFIGS
+### CONFIGS
 # fzf
 source ~/.config/fzf/config
 source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
