@@ -7,3 +7,6 @@ vim.o.scrolloff = 10
 vim.api.nvim_create_autocmd(
   {"FileType"}, { command = "set formatoptions-=cro" }
 )
+vim.api.nvim_create_autocmd(
+  {"VimLeave"}, { command = "set guicursor=a:hor20-blinkwait500-blinkon300-blinkoff300" }
+)
