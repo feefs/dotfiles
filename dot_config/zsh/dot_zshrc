@@ -66,6 +66,11 @@ bindkey '^ ' forward-word
 alias ls="exa"
 alias buu="brew update && brew upgrade"
 
+### ENV VARIABLES
+# mage
+export MAGEFILE_CACHE="/tmp/magefile"
+export MAGEFILE_ENABLE_COLOR=1
+
 ### COMPLETIONS
 # koushin completions
 FPATH="$HOME/repos/koushin/completions:${FPATH}"
