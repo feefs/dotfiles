@@ -49,8 +49,8 @@ export PATH="$HOME/.poetry/bin:$PATH"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 # go
 export PATH="$(go env GOPATH)/bin:$PATH"
-# docker cli
-export PATH="$HOME/.docker/bin:$PATH"
+# openjdk
+export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # spicetify
 SPICETIFY_INSTALL="$HOME/.spicetify"
 export PATH="$HOME/.spicetify:$PATH"
