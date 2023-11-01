@@ -130,7 +130,7 @@ module.exports = {
         // custom configs
         opacity: 0.95,
         hyperWindowSize: {
-            width: 595,
+            width: 603,
             height: 750,
             startX: 775,
             startY: (
