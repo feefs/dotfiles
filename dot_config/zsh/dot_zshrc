@@ -62,12 +62,12 @@ source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
 # fzf-tab
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ":fzf-tab:*" fzf-flags --height=60%
-zstyle ':fzf-tab:complete:cd:*' fzf-preview '\
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "\
 exa -alh -TL 2 \
---git --ignore-glob=".git" --no-permissions --no-time $realpath'
+--git --ignore-glob=".git" --no-permissions --no-time $realpath"
 # zsh-autosuggestions
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^ ' forward-word
+bindkey "^ " forward-word
 
 ### ALIASES
 alias ls="exa"
