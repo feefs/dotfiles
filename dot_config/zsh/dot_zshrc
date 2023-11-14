@@ -71,6 +71,7 @@ bindkey "^ " forward-word
 
 ### ALIASES
 alias ls="exa"
+alias ll="exa -alh"
 alias buu="brew update && brew upgrade"
 alias vim="nvim"
 
