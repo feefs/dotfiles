@@ -1,11 +1,6 @@
 FZF_DEFAULT_OPTS="--reverse --border"
 
 # theme
-# Catppuccin Frappe - https://github.com/catppuccin/fzf
-catppuccin_frappe="\
---color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
---color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
---color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 # Catppuccin Mocha - https://github.com/catppuccin/fzf
 catppuccin_mocha="\
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
