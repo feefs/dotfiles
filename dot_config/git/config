@@ -12,3 +12,5 @@
 	pager = less -F -X
 [rebase]
 	updateRefs = true
+[diff]
+	external = difft
