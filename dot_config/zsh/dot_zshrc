@@ -86,14 +86,19 @@ FPATH="$HOME/repos/koushin/completions:${FPATH}"
 # load completions
 autoload -Uz compinit && compinit
 
-if [ "$TERM_PROGRAM" = "vscode" ]; then
-    if [ -z "$TMUX" ]; then
-        if tmux has-session -t dev 2>/dev/null; then
-            tmux attach-session -t dev
-        else
-            tmux new-session -A -s dev
-        fi
+### TMUX
+# attach to tmux automatically
+if [ -z "$TMUX" ]; then
+    if tmux has-session -t dev 2>/dev/null; then
+        tmux attach-session -t dev
+    else
+        tmux new-session -A -s dev
     fi
-elif [ "$TERM_PROGRAM" = "Hyper" ]; then
+fi
+# run macchina
+if [[ ! -z "$TMUX"
+    && $(tmux display-message -p "#I") == "1"
+    && $(tmux display-message -p "#{pane_index}") == "0"
+]]; then
     macchina
 fi
