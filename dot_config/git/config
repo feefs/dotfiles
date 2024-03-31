@@ -13,4 +13,4 @@
 [rebase]
 	updateRefs = true
 [diff]
-	external = difft
+	external = difft --syntax-highlight=off
