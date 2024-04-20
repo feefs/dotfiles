@@ -58,7 +58,7 @@ export PATH="$HOME/.spicetify:$PATH"
 ### CONFIGS
 # fzf
 source ~/.config/fzf/config
-source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+eval "$(fzf --zsh)"
 # fzf-tab
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ":fzf-tab:*" fzf-flags --height=60%
