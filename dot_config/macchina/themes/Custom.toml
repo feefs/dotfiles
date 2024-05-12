@@ -11,7 +11,8 @@ separator_color = "White"
 
 [palette]
 type = "Dark"
-glyph = "色   "
+glyph = "色"
+spacing = 3
 visible = true
 
 [bar]
