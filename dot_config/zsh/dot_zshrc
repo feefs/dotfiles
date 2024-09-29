@@ -97,6 +97,7 @@ if [ -z "$TMUX" ]; then
 fi
 # run macchina
 if [[ ! -z "$TMUX"
+    && "$OSTYPE" =~ darwin*
     && $(tmux display-message -p "#I") == "1"
     && $(tmux display-message -p "#{pane_index}") == "0"
 ]]; then
