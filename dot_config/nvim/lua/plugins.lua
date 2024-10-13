@@ -19,11 +19,13 @@ require("lazy").setup({
 vim.cmd.colorscheme("catppuccin-mocha")
 
 leap = require("leap")
-leap.add_default_mappings()
 -- bidirectional search
-vim.keymap.set("n", "s", function()
-  local current_window = vim.fn.win_getid()
-  leap.leap { target_windows = { current_window } }
-end)
+vim.keymap.set({"n", "x", "o"}, "s", "<Plug>(leap)")
 -- grey out the search area
-vim.api.nvim_set_hl(0, 'LeapBackdrop', { fg = '#777777' })
+vim.api.nvim_set_hl(0, "LeapBackdrop", { fg = "#777777" })
+-- label highlighting
+vim.api.nvim_set_hl(0, "LeapLabel", { fg = "#a6e3a1", bold = true })
+-- label the first character
+leap.opts.max_phase_one_targets = 0
+-- don't automatically jump to safe labels
+leap.opts.safe_labels = {}
