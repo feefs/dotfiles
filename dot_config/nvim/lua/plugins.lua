@@ -16,9 +16,14 @@ require("lazy").setup({
   { "ggandor/leap.nvim", name = "leap" }
 })
 
-require("leap").add_default_mappings()
-vim.keymap.set("n", "s", function ()
+vim.cmd.colorscheme("catppuccin-mocha")
+
+leap = require("leap")
+leap.add_default_mappings()
+-- bidirectional search
+vim.keymap.set("n", "s", function()
   local current_window = vim.fn.win_getid()
-  require('leap').leap { target_windows = { current_window } }
+  leap.leap { target_windows = { current_window } }
 end)
+-- grey out the search area
 vim.api.nvim_set_hl(0, 'LeapBackdrop', { fg = '#777777' })
