@@ -36,6 +36,8 @@ case "$OSTYPE" in
 esac
 eval "$(${brew_prefix}/bin/brew shellenv)"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# fzf
+source ~/.config/fzf/config
 # fnm
 export FNM_DIR="$XDG_DATA_HOME/fnm"
 eval "$(fnm env --use-on-cd)"
@@ -49,16 +51,16 @@ export PATH="$HOME/.poetry/bin:$PATH"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 # go
 export PATH="$(go env GOPATH)/bin:$PATH"
+# mage
+export MAGEFILE_CACHE="/tmp/magefile"
+export MAGEFILE_ENABLE_COLOR=1
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # spicetify
 SPICETIFY_INSTALL="$HOME/.spicetify"
 export PATH="$HOME/.spicetify:$PATH"
 
-### CONFIGS
-# fzf
-source ~/.config/fzf/config
-eval "$(fzf --zsh)"
+### PLUGINS
 # fzf-tab
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 zstyle ":fzf-tab:*" fzf-flags --height=60%
@@ -75,12 +77,8 @@ alias ll="eza -alh"
 alias buu="brew update && brew upgrade"
 alias vim="nvim"
 
-### ENV VARIABLES
-# mage
-export MAGEFILE_CACHE="/tmp/magefile"
-export MAGEFILE_ENABLE_COLOR=1
-
 ### COMPLETIONS
+eval "$(fzf --zsh)"
 # koushin completions
 FPATH="$HOME/repos/koushin/completions:${FPATH}"
 # load completions
