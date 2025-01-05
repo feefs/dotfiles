@@ -38,6 +38,7 @@ eval "$(${brew_prefix}/bin/brew shellenv)"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # fzf
 source ~/.config/fzf/config
+eval "$(fzf --zsh)"
 # fnm
 export FNM_DIR="$XDG_DATA_HOME/fnm"
 eval "$(fnm env --use-on-cd)"
@@ -59,6 +60,8 @@ export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # spicetify
 SPICETIFY_INSTALL="$HOME/.spicetify"
 export PATH="$HOME/.spicetify:$PATH"
+# koushin
+FPATH="$HOME/repos/koushin/completions:${FPATH}"
 
 ### PLUGINS
 # fzf-tab
@@ -77,11 +80,7 @@ alias ll="eza -alh"
 alias buu="brew update && brew upgrade"
 alias vim="nvim"
 
-### COMPLETIONS
-eval "$(fzf --zsh)"
-# koushin completions
-FPATH="$HOME/repos/koushin/completions:${FPATH}"
-# load completions
+### LOAD COMPLETIONS
 autoload -Uz compinit && compinit
 
 ### TMUX
