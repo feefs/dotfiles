@@ -14,3 +14,5 @@
 	updateRefs = true
 [diff]
 	external = difft --syntax-highlight=off
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
