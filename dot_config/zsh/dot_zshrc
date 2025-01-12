@@ -54,9 +54,6 @@ export PATH="$HOME/.poetry/bin:$PATH"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 # go
 export PATH="$(go env GOPATH)/bin:$PATH"
-# mage
-export MAGEFILE_CACHE="/tmp/magefile"
-export MAGEFILE_ENABLE_COLOR=1
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # spicetify
