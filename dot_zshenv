@@ -1,1 +1,3 @@
 export ZDOTDIR=~/.config/zsh
+# avoid running compinit in /etc/zsh/zshrc
+skip_global_compinit=1
