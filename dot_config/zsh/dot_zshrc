@@ -7,7 +7,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-source $ZDOTDIR/plugins/ez-compinit/ez-compinit.plugin.zsh
+source "$ZDOTDIR/plugins/ez-compinit/ez-compinit.plugin.zsh"
 
 ### HISTORY
 HISTFILE="$ZDOTDIR/.zsh_history"
@@ -45,14 +45,14 @@ case "$OSTYPE" in
     SPICETIFY_INSTALL="$HOME/.spicetify"
     export PATH="$HOME/.spicetify:$PATH"
     # gcloud
-    source ~/google-cloud-sdk/path.zsh.inc
-    source ~/google-cloud-sdk/completion.zsh.inc
+    source "$HOME/google-cloud-sdk/path.zsh.inc"
+    source "$HOME/google-cloud-sdk/completion.zsh.inc"
     ;;
     linux*)
     ;;
 esac
 # fzf
-source ~/.config/fzf/config
+source "$HOME/.config/fzf/config"
 eval "$(fzf --zsh)"
 # fnm
 export FNM_DIR="$XDG_DATA_HOME/fnm"
@@ -63,7 +63,7 @@ export PATH="$(uv python dir --bin):$PATH"
 export POETRY_CONFIG_DIR="$HOME/.poetry"
 export PATH="$HOME/.poetry/bin:$PATH"
 # cargo
-. "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 # go
 export PATH="$(go env GOPATH)/bin:$PATH"
@@ -74,13 +74,13 @@ FPATH="$HOME/repos/koushin/completions:${FPATH}"
 
 ### PLUGINS
 # fzf-tab
-source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+source "$HOME/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh"
 zstyle ":fzf-tab:*" fzf-flags --height=60%
 zstyle ":fzf-tab:complete:cd:*" fzf-preview '\
 eza -alh -TL 2 --color=always \
 --git --ignore-glob=".git" --no-permissions --no-time $realpath'
 # zsh-autosuggestions
-source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey "^ " forward-word
 
 ### ALIASES
