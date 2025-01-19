@@ -38,6 +38,16 @@ case "$OSTYPE" in
 esac
 eval "$(${brew_prefix}/bin/brew shellenv)"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+# platform specific binaries
+case "$OSTYPE" in
+    darwin*)
+    # spicetify
+    SPICETIFY_INSTALL="$HOME/.spicetify"
+    export PATH="$HOME/.spicetify:$PATH"
+    ;;
+    linux*)
+    ;;
+esac
 # fzf
 source ~/.config/fzf/config
 eval "$(fzf --zsh)"
@@ -56,9 +66,6 @@ FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 export PATH="$(go env GOPATH)/bin:$PATH"
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
-# spicetify
-SPICETIFY_INSTALL="$HOME/.spicetify"
-export PATH="$HOME/.spicetify:$PATH"
 # koushin
 FPATH="$HOME/repos/koushin/completions:${FPATH}"
 
