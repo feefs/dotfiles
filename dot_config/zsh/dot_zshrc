@@ -44,8 +44,8 @@ eval "$(fzf --zsh)"
 # fnm
 export FNM_DIR="$XDG_DATA_HOME/fnm"
 eval "$(fnm env --use-on-cd)"
-# pyenv
-eval "$(pyenv init -)"
+# uv
+export PATH="$(uv python dir --bin):$PATH"
 # poetry
 export POETRY_CONFIG_DIR="$HOME/.poetry"
 export PATH="$HOME/.poetry/bin:$PATH"
