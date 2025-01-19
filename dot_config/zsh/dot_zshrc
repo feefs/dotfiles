@@ -44,6 +44,9 @@ case "$OSTYPE" in
     # spicetify
     SPICETIFY_INSTALL="$HOME/.spicetify"
     export PATH="$HOME/.spicetify:$PATH"
+    # gcloud
+    source ~/google-cloud-sdk/path.zsh.inc
+    source ~/google-cloud-sdk/completion.zsh.inc
     ;;
     linux*)
     ;;
