@@ -37,7 +37,6 @@ case "$OSTYPE" in
     ;;
 esac
 eval "$(${brew_prefix}/bin/brew shellenv)"
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # platform specific binaries
 case "$OSTYPE" in
     darwin*)
