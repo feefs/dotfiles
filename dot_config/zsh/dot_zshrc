@@ -48,6 +48,8 @@ case "$OSTYPE" in
     source "$HOME/google-cloud-sdk/completion.zsh.inc"
     ;;
     linux*)
+    # gcloud
+    source "/usr/share/google-cloud-sdk/completion.zsh.inc"
     ;;
 esac
 # fzf
