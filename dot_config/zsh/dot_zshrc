@@ -55,14 +55,8 @@ esac
 # fzf
 source "$HOME/.config/fzf/config"
 eval "$(fzf --zsh)"
-# fnm
-export FNM_DIR="$XDG_DATA_HOME/fnm"
-eval "$(fnm env --use-on-cd)"
 # uv
 export PATH="$(uv python dir --bin):$PATH"
-# poetry
-export POETRY_CONFIG_DIR="$HOME/.poetry"
-export PATH="$HOME/.poetry/bin:$PATH"
 # cargo
 source "$HOME/.cargo/env"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
