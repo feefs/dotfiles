@@ -3,6 +3,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 10
 vim.o.clipboard = "unnamedplus"
+vim.o.ignorecase = true
 
 vim.api.nvim_create_autocmd(
   {"FileType"}, { command = "set formatoptions-=cro" }
