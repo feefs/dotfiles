@@ -82,7 +82,7 @@ bindkey "^ " forward-word
 ### ALIASES
 alias ls="eza"
 alias ll="eza -alh"
-alias buu="brew update && brew upgrade"
+alias buu="brew update --verbose && brew upgrade"
 alias vim="nvim"
 
 ### TMUX
