@@ -80,6 +80,7 @@ source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey "^ " forward-word
 
 ### ALIASES
+alias hist="vim $HOME/.config/zsh/.zsh_history"
 alias ls="eza"
 alias ll="eza -alh"
 alias buu="brew update --verbose && brew upgrade"
