@@ -59,8 +59,8 @@ source "$HOME/.cargo/env"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 # go
 export PATH="$(go env GOPATH)/bin:$PATH"
-# opam
-source "$HOME/.opam/opam-init/init.zsh"
+# dune
+export DUNE_DIFF_COMMAND="difft --exit-code --color=always"
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # koushin
