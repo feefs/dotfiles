@@ -13,6 +13,6 @@
 [rebase]
 	updateRefs = true
 [diff]
-	external = difft --syntax-highlight=off
+	external = difft
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
