@@ -61,6 +61,8 @@ FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
 export PATH="$(go env GOPATH)/bin:$PATH"
 # dune
 export DUNE_DIFF_COMMAND="difft --exit-code --color=always"
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # koushin
