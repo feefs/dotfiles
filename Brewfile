@@ -1,5 +1,7 @@
 tap "charmbracelet/tap"
 brew "bat"
+brew "bazelisk"
+brew "buildifier"
 brew "chezmoi"
 brew "difftastic"
 brew "dune"
