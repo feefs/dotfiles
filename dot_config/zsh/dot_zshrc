@@ -86,6 +86,7 @@ alias ls="eza"
 alias ll="eza -alh"
 alias buu="brew update --verbose && brew upgrade"
 alias vim="nvim"
+alias gemini="TERM_PROGRAM=vscode gemini"
 
 ### TMUX
 # attach to tmux automatically
