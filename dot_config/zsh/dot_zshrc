@@ -62,7 +62,9 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 # dune
 export DUNE_DIFF_COMMAND="difft --exit-code --color=always"
 # fnm
-eval "$(fnm env --use-on-cd --shell zsh)"
+if [[ ! "$PATH" =~ "fnm_multishells" ]]; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
 # koushin
