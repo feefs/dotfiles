@@ -52,8 +52,6 @@ esac
 # fzf
 source "$HOME/.config/fzf/config"
 eval "$(fzf --zsh)"
-# uv
-export PATH="$(uv python dir --bin):$PATH"
 # cargo
 source "$HOME/.cargo/env"
 FPATH="$(rustc --print sysroot)/share/zsh/site-functions:${FPATH}"
@@ -67,6 +65,8 @@ if [[ ! "$PATH" =~ "fnm_multishells" ]]; then
 fi
 # openjdk
 export PATH="${brew_prefix}/opt/openjdk/bin:$PATH"
+# uv and agy
+export PATH="$HOME/.local/bin:$PATH"
 # koushin
 FPATH="$HOME/repos/koushin/completions:${FPATH}"
 
