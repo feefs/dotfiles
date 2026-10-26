@@ -7,3 +7,6 @@
 [submodule "dot_config/zsh/external_plugins/ez-compinit"]
 	path = dot_config/zsh/external_plugins/ez-compinit
 	url = https://github.com/mattmc3/ez-compinit
+[submodule "dot_gemini/antigravity-cli/external_agy-statusline"]
+	path = dot_gemini/antigravity-cli/external_agy-statusline
+	url = https://github.com/feefs/agy-statusline.git

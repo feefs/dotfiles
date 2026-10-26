@@ -1,0 +1,12 @@
+{
+  "agentMode": "auto",
+  "editorMode": "vim",
+  "enableTerminalSandbox": true,
+  "queuedMessages": "send-immediately",
+  "showFeedbackSurvey": false,
+  "showTips": false,
+  "statusLine": {
+    "type": "command",
+    "command": "$HOME/.gemini/antigravity-cli/agy-statusline/statusline.sh"
+  }
+}
