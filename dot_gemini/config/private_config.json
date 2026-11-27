@@ -1,18 +1,16 @@
 {
+  "plugins": {
+    "swarm": {
+      "enabled": true
+    }
+  },
   "userSettings": {
     "customThemeSeedsDark": {
       "background": "#1e1e2e",
       "foregroundOverride": "#cdd6f4",
       "primary": "#cba6f7"
     },
-    "globalPermissionGrants": {
-      "allow": [
-        "command(cat)",
-        "command(grep)",
-        "command(head)",
-        "command(ls)"
-      ]
-    },
+    "globalPermissionGrants": {},
     "themeMode": "THEME_MODE_DARK"
   }
 }

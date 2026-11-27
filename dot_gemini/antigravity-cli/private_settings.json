@@ -1,5 +1,4 @@
 {
-  "agentMode": "auto",
   "editorMode": "vim",
   "enableTerminalSandbox": true,
   "queuedMessages": "send-immediately",
